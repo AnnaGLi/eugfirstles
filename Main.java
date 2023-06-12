@@ -1,14 +1,16 @@
-//Выбросить случайное целое число в диапазоне от 0 до 2000 и сохранить в i
 
+//Посчитать и сохранить в n номер старшего значащего бита выпавшего числа
 package org.example;
 
 import java.util.Random;
 
+import static java.lang.Integer.*;
+
 public class Main {
     public static void main(String[] args) {
-        int i;
-        Random num = new Random();
-        i = num.nextInt(0, 2001);
+        int i = new Random().nextInt(0, 2000);
         System.out.println(i);
+        int n = numberOfLeadingZeros(i);
+        System.out.println(n);
     }
 }
